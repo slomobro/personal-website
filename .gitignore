@@ -1,0 +1,10 @@
+# dependencies / tooling (this is a plain static site — none required to run)
+node_modules/
+package-lock.json
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/

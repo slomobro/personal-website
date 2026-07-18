@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>A Digital Wilderness</title>
+  <meta name="description" content="A wild patch of the internet — tended, not tamed. Essays, field notes, and things made, growing slowly over time." />
+
+  <!-- Open Graph / social -->
+  <meta property="og:title" content="A Digital Wilderness" />
+  <meta property="og:description" content="A wild patch of the internet — tended, not tamed." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts: Fraunces (display, wonky & organic) + Newsreader (literary body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%BF%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============================== HERO ============================== -->
+  <header class="hero" id="top">
+    <!-- Layered nature scene, hand-built SVG: dusk sky, mist, meadow, wild grasses, swallows -->
+    <div class="hero__scene" aria-hidden="true">
+      <svg class="hero__svg" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMax slice" role="img">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#2b3436" />
+            <stop offset="0.45" stop-color="#3c4741" />
+            <stop offset="0.72" stop-color="#586052" />
+            <stop offset="1" stop-color="#8a8d76" />
+          </linearGradient>
+          <radialGradient id="glow" cx="0.72" cy="0.32" r="0.6">
+            <stop offset="0" stop-color="#d7c9a0" stop-opacity="0.55" />
+            <stop offset="0.4" stop-color="#c7b78f" stop-opacity="0.18" />
+            <stop offset="1" stop-color="#c7b78f" stop-opacity="0" />
+          </radialGradient>
+          <linearGradient id="hill1" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#4a5347" />
+            <stop offset="1" stop-color="#3a4238" />
+          </linearGradient>
+          <linearGradient id="hill2" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#39413233" />
+            <stop offset="1" stop-color="#2f362b" />
+          </linearGradient>
+        </defs>
+
+        <rect width="1440" height="900" fill="url(#sky)" />
+        <rect width="1440" height="900" fill="url(#glow)" />
+
+        <!-- distant misted ridge -->
+        <path opacity="0.5" fill="#5f6659" d="M0,470 C220,430 380,455 560,440 C760,423 900,470 1080,450 C1250,432 1360,455 1440,445 L1440,900 L0,900 Z" />
+        <!-- mist band -->
+        <rect y="430" width="1440" height="120" fill="#c9cbb8" opacity="0.10" />
+        <!-- mid hill -->
+        <path fill="url(#hill2)" d="M0,560 C240,505 470,560 680,545 C920,528 1120,585 1440,540 L1440,900 L0,900 Z" />
+        <!-- near hill / meadow -->
+        <path fill="url(#hill1)" d="M0,690 C260,640 520,700 760,680 C1010,659 1230,712 1440,672 L1440,900 L0,900 Z" />
+
+        <!-- swallows in flight -->
+        <g class="hero__birds" fill="none" stroke="#20261f" stroke-width="3.2" stroke-linecap="round">
+          <path class="bird bird--1" d="M300,250 q22,-24 44,0 q22,-24 44,0" />
+          <path class="bird bird--2" d="M470,205 q16,-18 32,0 q16,-18 32,0" />
+          <path class="bird bird--3" d="M235,320 q13,-15 26,0 q13,-15 26,0" />
+        </g>
+
+        <!-- foreground wild grasses -->
+        <g class="hero__grass" stroke-linecap="round" fill="none">
+          <g stroke="#2b311f" stroke-width="4" opacity="0.92">
+            <path d="M60,900 C55,780 40,720 20,660" />
+            <path d="M95,900 C92,800 100,740 122,690" />
+            <path d="M140,900 C136,790 128,730 108,678" />
+            <path d="M1360,900 C1356,790 1372,720 1400,660" />
+            <path d="M1410,900 C1408,800 1400,742 1378,694" />
+            <path d="M1310,900 C1306,800 1296,742 1274,700" />
+          </g>
+          <g stroke="#3a4127" stroke-width="3" opacity="0.8">
+            <path d="M210,900 C206,800 214,742 236,700" />
+            <path d="M1250,900 C1246,810 1236,752 1214,712" />
+            <path d="M175,900 C172,820 165,768 150,726" />
+          </g>
+          <!-- seed heads -->
+          <g fill="#4a5230" stroke="none" opacity="0.85">
+            <ellipse cx="20" cy="658" rx="6" ry="14" transform="rotate(-18 20 658)" />
+            <ellipse cx="122" cy="688" rx="5" ry="12" transform="rotate(12 122 688)" />
+            <ellipse cx="1400" cy="658" rx="6" ry="14" transform="rotate(16 1400 658)" />
+            <ellipse cx="1378" cy="692" rx="5" ry="12" transform="rotate(-10 1378 692)" />
+          </g>
+        </g>
+      </svg>
+    </div>
+
+    <!-- Top navigation -->
+    <nav class="nav" aria-label="Primary">
+      <a class="nav__brand" href="#top">
+        <span class="nav__mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+            <path d="M8,20 q10,-11 20,0 q10,-11 12,0" />
+          </svg>
+        </span>
+        <span class="nav__wordmark">Wilderness</span>
+      </a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__menu" id="nav-menu">
+        <li><a href="#enter">The Wild</a></li>
+        <li><a href="#wanderings">Wanderings</a></li>
+        <li><a href="#field-notes">Field Notes</a></li>
+        <li><a href="#undergrowth">Undergrowth</a></li>
+        <li><a href="#tender">The Tender</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero title -->
+    <div class="hero__title">
+      <p class="hero__eyebrow">Tended, not tamed</p>
+      <h1 class="hero__h1">A Digital<br /><em>Wilderness</em></h1>
+      <p class="hero__sub">
+        A wild patch of the internet — some of it cleared and cared for,
+        much of it left to grow as it will. Wander in. Nothing here is finished.
+      </p>
+      <a class="hero__cta" href="#enter">
+        Wander in
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6" /></svg>
+      </a>
+    </div>
+
+    <div class="hero__scroll" aria-hidden="true">
+      <span>keep going</span>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============================== ENTER / MANIFESTO ============================== -->
+    <section class="enter" id="enter">
+      <div class="wrap wrap--narrow">
+        <p class="section-eyebrow">Enter the wilderness</p>
+        <p class="lede">
+          Most of the internet is a lawn — mown, fenced, sorted newest-first, and
+          arranged to keep you scrolling. This is not that.
+        </p>
+        <p>
+          A <em>digital garden</em> is a lovely idea: a place you cultivate slowly, where
+          pages are tended and revised instead of published and forgotten. But a garden is
+          orderly. It is <em>weeded</em>. What I'm making is a little more untamed — a
+          <strong>digital wilderness</strong>. I clear a few trails and tend what needs tending,
+          but I let the rest grow wild: half-formed thoughts, tangled essays, things I'm still
+          learning out loud. You won't find a tidy timeline. You'll find a landscape.
+        </p>
+        <p>
+          Roam it however you like. Some paths are well-worn. Some end abruptly.
+          Come back later and the undergrowth will have shifted.
+        </p>
+      </div>
+
+      <!-- growth-stage legend -->
+      <div class="wrap wrap--narrow">
+        <div class="legend" role="note" aria-label="How to read the growth stages">
+          <span class="legend__title">Everything here is growing:</span>
+          <ul class="legend__list">
+            <li><span class="stage stage--seed">🌱 Seed</span> just planted — a rough thought</li>
+            <li><span class="stage stage--sapling">🌿 Sapling</span> taking shape, still growing</li>
+            <li><span class="stage stage--wildwood">🌳 Wildwood</span> rooted, but never truly done</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true">
+      <svg viewBox="0 0 1200 40" preserveAspectRatio="none"><path d="M0,20 C150,4 250,36 400,22 C560,7 700,34 860,22 C1010,10 1100,32 1200,20" fill="none" stroke="currentColor" stroke-width="1.5" /></svg>
+    </div>
+
+    <!-- ============================== WANDERINGS / ESSAYS ============================== -->
+    <section class="grove" id="wanderings">
+      <div class="wrap">
+        <header class="grove__head">
+          <h2 class="grove__title">Wanderings</h2>
+          <p class="grove__blurb">Longer paths — essays and the ideas I keep circling back to.</p>
+        </header>
+
+        <!-- TODO: Replace these placeholder essays with your real writing. -->
+        <ul class="cards">
+          <li class="card">
+            <a class="card__link" href="#">
+              <span class="card__meta"><span class="stage stage--wildwood">🌳 Wildwood</span><span class="card__date">2026</span></span>
+              <h3 class="card__title">On tending wild things</h3>
+              <p class="card__excerpt">Why I stopped trying to keep a tidy blog and started letting the ideas grow over each other instead.</p>
+              <span class="card__more">follow the trail →</span>
+            </a>
+          </li>
+          <li class="card">
+            <a class="card__link" href="#">
+              <span class="card__meta"><span class="stage stage--sapling">🌿 Sapling</span><span class="card__date">2026</span></span>
+              <h3 class="card__title">The lawn and the meadow</h3>
+              <p class="card__excerpt">A meditation on feeds, algorithms, and what we lose when everything is sorted newest-first.</p>
+              <span class="card__more">follow the trail →</span>
+            </a>
+          </li>
+          <li class="card">
+            <a class="card__link" href="#">
+              <span class="card__meta"><span class="stage stage--seed">🌱 Seed</span><span class="card__date">2026</span></span>
+              <h3 class="card__title">Notes toward a slower internet</h3>
+              <p class="card__excerpt">Scattered beginnings. This one isn't ready — but nothing here is, and that's the point.</p>
+              <span class="card__more">follow the trail →</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================== FIELD NOTES ============================== -->
+    <section class="notes" id="field-notes">
+      <div class="wrap">
+        <header class="grove__head">
+          <h2 class="grove__title">Field Notes</h2>
+          <p class="grove__blurb">Short, living entries. Observations, half-thoughts, things I want to remember. These change often.</p>
+        </header>
+
+        <!-- TODO: These are the "wild" interlinked notes. Add, revise, and cross-link freely. -->
+        <ul class="notes__list">
+          <li class="note">
+            <span class="stage stage--seed">🌱</span>
+            <div>
+              <h3 class="note__title">A thing I read today</h3>
+              <p>Drop a quote, a link, a passing idea here. Field notes don't need to be finished — they just need to be captured before they blow away.</p>
+              <span class="note__stamp">planted recently</span>
+            </div>
+          </li>
+          <li class="note">
+            <span class="stage stage--sapling">🌿</span>
+            <div>
+              <h3 class="note__title">Something I'm chewing on</h3>
+              <p>An idea that's grown a bit since I first planted it. Cross-link it to a Wandering when it's ready to become an essay.</p>
+              <span class="note__stamp">revised twice</span>
+            </div>
+          </li>
+          <li class="note">
+            <span class="stage stage--wildwood">🌳</span>
+            <div>
+              <h3 class="note__title">A belief that has taken root</h3>
+              <p>Some notes stop being tentative. They don't get finished so much as they get deep. This is one of those.</p>
+              <span class="note__stamp">tended for a while</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true">
+      <svg viewBox="0 0 1200 40" preserveAspectRatio="none"><path d="M0,20 C150,36 250,4 400,20 C560,34 700,6 860,20 C1010,32 1100,8 1200,20" fill="none" stroke="currentColor" stroke-width="1.5" /></svg>
+    </div>
+
+    <!-- ============================== UNDERGROWTH / PROJECTS ============================== -->
+    <section class="grove grove--alt" id="undergrowth">
+      <div class="wrap">
+        <header class="grove__head">
+          <h2 class="grove__title">Undergrowth</h2>
+          <p class="grove__blurb">Things I've made and things I'm making — projects, experiments, and roots I'm still putting down.</p>
+        </header>
+
+        <!-- TODO: Replace with your real projects, side quests, and experiments. -->
+        <ul class="cards cards--projects">
+          <li class="card">
+            <a class="card__link" href="#">
+              <h3 class="card__title">A project worth showing</h3>
+              <p class="card__excerpt">What it is, why you made it, and where it lives. A screenshot or repo link fits nicely here.</p>
+              <span class="card__more">see it →</span>
+            </a>
+          </li>
+          <li class="card">
+            <a class="card__link" href="#">
+              <h3 class="card__title">An experiment in progress</h3>
+              <p class="card__excerpt">Something half-built. In a wilderness, that's allowed to be on display.</p>
+              <span class="card__more">see it →</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================== THE TENDER / ABOUT ============================== -->
+    <section class="tender" id="tender">
+      <div class="wrap wrap--split">
+        <div class="tender__portrait" aria-hidden="true">
+          <!-- TODO: swap this for a real photo of you (nature-y, in keeping with the theme) -->
+          <svg viewBox="0 0 300 360" width="100%" role="img">
+            <rect width="300" height="360" rx="6" fill="#e7e2d5" />
+            <path d="M0,300 C70,270 120,300 170,285 C220,270 260,300 300,282 L300,360 L0,360 Z" fill="#c9c8a8" />
+            <path d="M0,320 C80,300 140,325 200,312 C250,301 280,322 300,312 L300,360 L0,360 Z" fill="#b7ba97" />
+            <circle cx="150" cy="150" r="46" fill="#cfc7b2" />
+            <text x="150" y="230" text-anchor="middle" font-family="Fraunces, serif" font-size="15" fill="#7c7864">your photo here</text>
+          </svg>
+        </div>
+        <div class="tender__body">
+          <p class="section-eyebrow">The Tender</p>
+          <h2 class="tender__name">
+            <!-- TODO: your name -->
+            Hello, I'm <em>[Your Name]</em>
+          </h2>
+          <p>
+            I keep this wilderness. Write a few sentences here about who you are and what you
+            care about — the through-line that runs under everything growing on this site.
+            Keep it human. It doesn't need to be a résumé.
+          </p>
+          <p>
+            You might mention what you make, what you're currently obsessed with, and where
+            someone should go next if they want to wander deeper.
+          </p>
+          <ul class="tender__links">
+            <!-- TODO: replace with your real links -->
+            <li><a href="mailto:you@example.com">Email</a></li>
+            <li><a href="#">Newsletter</a></li>
+            <li><a href="#">GitHub</a></li>
+            <li><a href="#">Elsewhere</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================== FOOTER / COLOPHON ============================== -->
+  <footer class="foot">
+    <div class="wrap foot__inner">
+      <div class="foot__mark" aria-hidden="true">
+        <svg viewBox="0 0 60 30" width="60" height="30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M6,18 q9,-10 18,0 q9,-10 18,0" />
+          <path d="M40,20 q6,-7 12,0" />
+        </svg>
+      </div>
+      <p class="foot__line">A digital wilderness — tended by hand, growing since <span id="year">2026</span>.</p>
+      <p class="foot__colophon">
+        Set in Fraunces &amp; Newsreader. No trackers, no feed, no fences.
+        <a href="#top">Back to the treeline ↑</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
