@@ -49,13 +49,10 @@ Search the code for `TODO` and `[Your Name]`. The main spots:
 - **Wanderings** — swap the three placeholder essays for your real writing.
 - **Field Notes** — your short, living entries; cross-link them freely.
 - **Undergrowth** — your projects and experiments.
-- **Hero photo** — the hero uses a real nature photograph (a misty-mountain
-  "wallpaper" shot) hotlinked from [Unsplash](https://unsplash.com), which is
-  free to use. To change the mood, swap the `background-image` URL in
-  `.hero__media` (`assets/css/main.css`); a few alternate photo IDs are listed
-  in a comment right there. A moody gradient sits behind it as a fallback, so
-  the title stays legible even if the image is slow. Prefer to **self-host**?
-  Drop a `.jpg` in `assets/img/` and point the URL at `../img/your-photo.jpg`.
+- **Hero photo** — self-hosted. Add your photo at **`assets/img/hero.jpg`**
+  (see `assets/img/README.md`). The hero loads `../img/hero.jpg` and falls back
+  to a moody gradient until the file is present, so the title stays legible
+  either way. To restyle the mood later, just replace that file.
 
 ## Type & color
 

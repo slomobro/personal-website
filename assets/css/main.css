@@ -73,15 +73,12 @@ em { font-style: italic; }
 .hero__media {
   position: absolute; inset: 0; z-index: -2;
   background-color: var(--hero-fallback);
-  /* Real nature photo (free to use, Unsplash). Swap the URL to restyle the
-     whole mood. To self-host instead: drop a file in assets/img/ and use
-     url("../img/your-photo.jpg"). Alternates worth trying:
-       photo-1470071459604-3b5ec3a7fe05  (foggy forest)
-       photo-1447752875215-b2761acb3c5d  (forest path in mist)
-       photo-1501785888041-af3ef285b470  (lake & mountains)          */
+  /* dhrizza's own photo — self-hosted. Add the file at assets/img/hero.jpg
+     (see README). A moody gradient sits behind it as a fallback so the title
+     stays legible if the image is missing or slow. */
   background-image:
-    linear-gradient(180deg, rgba(20,24,25,0.35) 0%, rgba(20,24,25,0.15) 38%, rgba(20,24,25,0.72) 100%),
-    url("https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=2400&q=80"),
+    linear-gradient(180deg, rgba(18,24,28,0.34) 0%, rgba(18,24,28,0.08) 34%, rgba(18,24,28,0.68) 100%),
+    url("../img/hero.jpg"),
     linear-gradient(180deg, #2f3a3c 0%, #232a2b 55%, #1a1f20 100%);
   background-size: cover;
   background-position: center;
@@ -94,15 +91,16 @@ em { font-style: italic; }
   width: min(100% - 3rem, var(--maxw)); margin-inline: auto;
   padding-top: 1.7rem;
 }
-.nav__brand { text-decoration: none; color: #fff; }
+.nav__brand { text-decoration: none; color: #fff; text-shadow: 0 1px 12px rgba(10,14,16,0.45); }
 .nav__wordmark { font-family: var(--display); font-weight: 600; font-size: 1.3rem; letter-spacing: .01em; }
 .nav__menu {
   display: flex; gap: 1.9rem; list-style: none; margin: 0; padding: 0;
   font-family: var(--display); font-size: .98rem;
 }
 .nav__menu a {
-  text-decoration: none; color: rgba(255,255,255,0.82);
+  text-decoration: none; color: rgba(255,255,255,0.9);
   padding-bottom: 3px; border-bottom: 1.5px solid transparent;
+  text-shadow: 0 1px 12px rgba(10,14,16,0.45);
   transition: color .25s, border-color .25s;
 }
 .nav__menu a:hover, .nav__menu a:focus-visible { color: #fff; border-color: rgba(255,255,255,0.7); }
@@ -114,31 +112,20 @@ em { font-style: italic; }
   width: min(100% - 3rem, var(--maxw)); margin-inline: auto;
   max-width: 42rem;
 }
-.hero__eyebrow {
-  font-family: var(--display); letter-spacing: .2em; text-transform: uppercase;
-  font-size: .78rem; color: rgba(255,255,255,0.85); margin: 0 0 1rem; font-weight: 600;
-}
 .hero__h1 {
   font-size: clamp(3rem, 8.5vw, 6.4rem);
   font-weight: 380;
   letter-spacing: -0.02em;
   line-height: 1.02;
+  text-shadow: 0 2px 30px rgba(10,14,16,0.4);
 }
 .hero__h1 em { font-style: italic; font-weight: 460; }
 .hero__sub {
   font-size: clamp(1.08rem, 1.3vw, 1.3rem);
-  max-width: 40ch; margin: 1.5rem 0 2rem;
-  color: rgba(255,255,255,0.92);
+  max-width: 40ch; margin: 1.5rem 0 0;
+  color: rgba(255,255,255,0.94);
+  text-shadow: 0 1px 18px rgba(10,14,16,0.5);
 }
-.hero__cta {
-  display: inline-block;
-  font-family: var(--display); font-size: 1rem; font-weight: 600;
-  text-decoration: none; color: #fff;
-  padding: .62rem 1.3rem;
-  border: 1.5px solid rgba(255,255,255,0.55); border-radius: 999px;
-  transition: background .25s, color .25s, border-color .25s;
-}
-.hero__cta:hover, .hero__cta:focus-visible { background: #fff; color: var(--ink); border-color: #fff; }
 
 /* ============================== ENTER / MANIFESTO ============================== */
 .enter { padding: clamp(4rem, 11vh, 8rem) 0 clamp(3rem, 7vh, 5rem); }
